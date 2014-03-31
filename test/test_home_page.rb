@@ -6,7 +6,7 @@ module Test
 
     def setup
       @driver = Selenium::WebDriver.for :phantomjs
-      @driver.navigate.to('http://yizeng.me')
+      @driver.navigate.to('https://login.salesforce.com/')
     end
 
     def teardown
@@ -14,7 +14,7 @@ module Test
     end
 
     def test_home_page_title
-      assert_equal('Yi Zeng', @driver.title)
+      assert_equal('salesforce.com - Customer Secure Login Page', @driver.title)
     end
   end
 end
