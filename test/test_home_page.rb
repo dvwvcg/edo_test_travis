@@ -14,7 +14,7 @@ module Test
     end
 
     def test_home_page_title
-      assert_equal('salesforce.com - Customer Secure Login Page', @driver.title)
+      assert_equal('salesforce.com - Customer Secure Login PageXXX', @driver.title)
     end
   end
 end
