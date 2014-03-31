@@ -6,7 +6,7 @@ module Test
 
     def setup
       @driver = Selenium::WebDriver.for :phantomjs
-      @driver.navigate.to('https://login.salesforce.com/')
+      @driver.navigate.to('https://test.salesforce.com/')
     end
 
     def teardown
@@ -19,9 +19,10 @@ module Test
 
 
     def test_new
-      @driver.type "username", "dvanderwatt@vepcg.com"
+      @driver.type "username", "dvanderwatt@vepcg.com.edo0"
+      @driver.type "password", "test1234"
       @driver.click "Login"
-      assertTrue(@driver.getPageSource().contains("Please enter your Password"))
+      assert_equal('salesforce.com - Enterprise Edition', @driver.title)
     end
 
   end
