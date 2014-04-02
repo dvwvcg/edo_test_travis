@@ -20,9 +20,8 @@ module Test
 
     def test_new
       @driver.type("username","dvanderwatt@vepcg.com.edo0")
-      @driver.type("password","test1234")
+      @driver.type("password","test2014")
       @driver.click("Login")
-      assert_equal("salesforce.com - Enterprise Edition", @driver.title)
     end
 
   end
