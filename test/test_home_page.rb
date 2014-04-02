@@ -19,9 +19,16 @@ module Test
 
 
     def test_new
-      @driver.type("username","dvanderwatt@vepcg.com.edo0")
-      @driver.type("password","test2014")
-      @driver.click("Login")
+#      @driver.type("username","")
+
+	element = @driver.find_element(:name, 'username')
+	element.send_keys "dvanderwatt@vepcg.com.edo0"
+	element = @driver.find_element(:name, 'password')
+	element.send_keys "test2014"
+	element.submit
+
+#      @driver.type("password","test2014")
+#      @driver.click("Login")
     end
 
   end
