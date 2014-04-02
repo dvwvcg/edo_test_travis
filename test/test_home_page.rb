@@ -21,9 +21,10 @@ module Test
     def test_new
 #      @driver.type("username","")
 
+        @driver.navigate.to('https://test.salesforce.com/')
 	element = @driver.find_element(:name, 'username')
 	element.send_keys "dvanderwatt@vepcg.com.edo0"
-	element = @driver.find_element(:name, 'password')
+	element = @driver.find_element(:name, 'pw')
 	element.send_keys "test2014"
 	element.submit
 
