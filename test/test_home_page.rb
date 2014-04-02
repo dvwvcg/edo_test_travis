@@ -29,8 +29,9 @@ module Test
         @driver.navigate.to('https://cs16.salesforce.com/006f0000004PyW6')
         # then click on new quote
         @driver.navigate.to('https://cs16.salesforce.com/servlet/servlet.Integration?lid=00bf0000000DtHy&eid=006f0000004PyW6&ic=1')
-        ## enter into new quote
-        #element.submit
+        # enter into new quote
+        element = @driver.find_element(:name, 'j_id0:j_id1:j_id2:j_id6:j_id7')
+        element.submit
         ## find the first input box and enter a quantity of 10
        # element = @driver.find_element(:name, 'j_id0:j_id7:j_id50:j_id54:0:j_id61')
         #element.send_keys "10"
